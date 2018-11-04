@@ -1,11 +1,10 @@
-
 if(!exists("NEI")){
   NEI <- readRDS("SCC_PM25.rds")
 }
 if(!exists("SCC")){
   SCC <- readRDS("Source_Classification_Code.rds")
 }
- 
+
 # Make a plot showing the total PM2.5 emission from all sources 
 # for the years 1999, 2002, 2005, 2008.
 
