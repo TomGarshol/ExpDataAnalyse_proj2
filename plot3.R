@@ -1,4 +1,4 @@
-## This first line will likely take a few seconds. Be patient!
+## Long calculation time. We will get there !
 if(!exists("NEI")){
   NEI <- readRDS("./data/summarySCC_PM25.rds")
 }
@@ -11,7 +11,6 @@ library(ggplot2)
 # Of the four types of sources indicated by the type (point, nonpoint, onroad, nonroad) variable, 
 # which of these four sources have seen decreases in emissions from 1999 2008 for Baltimore City? 
 # Which have seen increases in emissions from 1999 2008? 
-# Use the ggplot2 plotting system to make a plot answer this question.
 
 # 24510 is Baltimore, see plot2.R
 subsetNEI  <- NEI[NEI$fips=="24510", ]
