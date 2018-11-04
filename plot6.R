@@ -1,4 +1,4 @@
-## This first line will likely take a few seconds. Be patient!
+## Long calculation time. We will get there !
 if(!exists("NEI")){
   NEI <- readRDS("summarySCC_PM25.rds")
 }
@@ -16,9 +16,9 @@ library(ggplot2)
 # vehicle sources in Los Angeles County, California (fips == "06037"). 
 # Which city has seen greater changes over time in motor vehicle emissions?
 
-# 24510 is Baltimore, see plot2.R, 06037 is LA CA
+# 24510 is Baltimore, 06037 is LA CA
 # Searching for ON-ROAD type in NEI
-# Don't actually know it this is the intention, but searching for 'motor' in SCC only gave a subset (non-cars)
+
 subsetNEI <- NEI[(NEI$fips=="24510"|NEI$fips=="06037") & NEI$type=="ON-ROAD",  ]
 
 aggregatedTotalByYearAndFips <- aggregate(Emissions ~ year + fips, subsetNEI, sum)
