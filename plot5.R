@@ -1,4 +1,4 @@
-## This first line will likely take a few seconds. Be patient!
+## Long calculation time. We will get there !
 if(!exists("NEI")){
   NEI <- readRDS("data/summarySCC_PM25.rds")
 }
@@ -14,9 +14,7 @@ library(ggplot2)
 
 # How have emissions from motor vehicle sources changed from 1999-2008 in Baltimore City?
 
-# 24510 is Baltimore, see plot2.R
-# Searching for ON-ROAD type in NEI
-# Don't actually know it this is the intention, but searching for 'motor' in SCC only gave a subset (non-cars)
+
 subsetNEI <- NEI[NEI$fips=="24510" & NEI$type=="ON-ROAD",  ]
 
 aggregatedTotalByYear <- aggregate(Emissions ~ year, subsetNEI, sum)
